@@ -10,6 +10,7 @@ import mark from 'markdown-it-mark'
 import toc from 'markdown-it-toc-and-anchor'
 import katex from 'markdown-it-katex'
 import tasklists from 'markdown-it-task-lists'
+import container from 'markdown-it-container'
 
 export default {
   md: new markdownIt(),
@@ -146,6 +147,7 @@ export default {
       .use(abbreviation)
       .use(insert)
       .use(mark)
+      .use(container)
       .use(katex, { "throwOnError": false, "errorColor": " #cc0000" })
       .use(tasklists, { enabled: this.taskLists })
 
